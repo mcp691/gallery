@@ -1,12 +1,17 @@
+<div class="container" align="center">
 <p id="notice"><%= notice %></p>
 <% provide(:title, @product.name) %>
 
 
-
-<%= image_tag(@product.image_url, class: "img-fluid") %>
-<h1><%= @product.name %></h1>
-<%= @product.description %>
-<%= number_to_currency(@product.price/100.to_f) %>
-
-<%= link_to 'Edit', edit_product_path(@product) %> |
-<%= link_to 'Back', products_path %>
+<div class="paint" style="width: 30rem;">
+  <%= link_to 'Back', products_path %>
+  <%= image_tag(@product.image_url, class: "img-fluid card-img-top") %>
+  <div class="card-body">
+    <h1 class="card-title"><%= @product.name %></h1>
+    <p><%= @product.description %></p>
+    <h3 class="card-title"><%= number_to_currency(@product.price/100.to_f) %></h3>
+    <%= link_to 'Show', @product %>
+    <%= link_to 'Edit', edit_product_path(@product) %>
+    <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
+  </div>
+</div>
