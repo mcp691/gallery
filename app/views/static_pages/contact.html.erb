@@ -1,3 +1,25 @@
-<% provide(:title, "Contact") %>
-<h1>Contact</h1>
-<p>Find me in app/views/static_pages/contact.html.erb</p>
+<% provide(:title, "Contact Me") %>
+
+<% if notice %>
+<%= flash[:notice] %>
+<% end %>
+
+<%= form_with(url:"/static_pages/thank_you", method: "post", local: true) do |form| %>
+<div class="form-frame">
+  <h1>Contact Me</h1>
+  <br>
+  <div class="form-group">
+    <%= form.text_field :name, class: "form-control", placeholder: "Enter Name" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= form.text_field :email, class: "form-control", placeholder: "Enter Email" %>
+  </div>
+  <br>
+  <div class="form-group">
+    <%= form.text_area :message, class: "form-control", placeholder: "Enter Message", rows: 5 %>
+  </div>
+  <br>
+  <%= form.submit "Send", class: "btn" %>
+</div>
+<% end %>

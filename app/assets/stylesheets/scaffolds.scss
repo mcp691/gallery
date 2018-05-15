@@ -85,11 +85,11 @@ label {
 
 .form-frame {
   background-color: lightgray;
-  margin: 5% 35% 5% 35%;
+  margin: 5% 30% 5% 30%;
   padding: 4%;
 }
 
-@media only screen and (max-width: 500px) {
+@media only screen and (max-width: 800px) {
     .form-frame {
         margin: 10% 0% 5% 0%;
         padding: 7%;
