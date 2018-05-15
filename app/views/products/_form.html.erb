@@ -1,37 +1,40 @@
-<%= form_with(model: product, local: true) do |form| %>
+<div class="form-frame">
+  <h1>New Painting</h1>
+  <%= form_with(model: product, local: true) do |form| %>
   <% if product.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
+  <div id="error_explanation">
+    <h2><%= pluralize(product.errors.count, "error") %> prohibited this product from being saved:</h2>
 
-      <ul>
+    <ul>
       <% product.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+      <li><%= message %></li>
       <% end %>
-      </ul>
-    </div>
+    </ul>
+  </div>
   <% end %>
 
   <div class="field">
-    <%= form.label :name %>
-    <%= form.text_field :name, id: :product_name %>
+    <br>
+    <%= form.text_field :name, id: :product_name, class: "form-control", placeholder: "Name of Painting" %>
   </div>
 
   <div class="field">
-    <%= form.label :description %>
-    <%= form.text_area :description, id: :product_description %>
+    <br>
+    <%= form.text_area :description, id: :product_description, class: "form-control", placeholder: "Description" %>
   </div>
 
   <div class="field">
-    <%= form.label :image_url %>
-    <%= form.text_field :image_url, id: :product_image_url %>
-  </div>
+    <br>
+    <%= form.text_field :image_url, id: :product_image_url, class: "form-control", placeholder: "Image URL" %>
+    </div>
 
   <div class="field">
-    <%= form.label :price %>
-    <%= form.number_field :price, id: :product_price %>
+    <br>
+    <%= form.number_field :price, id: :product_price, class: "form-control", placeholder: "Price for $20.00 enter 2000" %>
   </div>
 
   <div class="actions">
     <%= form.submit %>
   </div>
-<% end %>
+  <% end %>
+</div>

@@ -82,3 +82,15 @@ div {
 label {
   display: block;
 }
+
+.form-frame {
+  background-color: lightgray;
+  margin: 5% 35% 5% 35%;
+  padding: 7%;
+}
+
+@media only screen and (max-width: 500px) {
+    .form-frame {
+        margin: 10% 0% 5% 0%;
+    }
+}
