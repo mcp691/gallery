@@ -1,9 +1,7 @@
 <p id="notice"><%= notice %></p>
 <% provide(:title, "Artwork") %>
 
-<h1>Products</h1>
-
-
+<h1>Artwork</h1>
 
 
 <% @products.each do |product| %>
@@ -12,4 +10,3 @@
 
 <br>
 <%= link_to 'New Product', new_product_path %>
-<%= link_to 'Home', static_pages_home_path %>
