@@ -105,14 +105,18 @@ label {
 }
 
 .admin {
+  margin-top: 5%;
   display: flex;
-  justify-content:flex-end;
+  justify-content:center;
+}
+
+.site-body {
+  margin: 2% 5% 0 5%;
 }
 
 .page-wrap {
   min-height: 100%;
   /* equal to footer height */
-  margin: 2% 5% 0 5%;
   margin-bottom: -142px;
 }
 
