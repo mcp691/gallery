@@ -35,9 +35,36 @@ a {
   }
 }
 
+.jumbotron {
+  padding: 1% 1% 0 1%;
+}
+
+.nav-link {
+  font-size: 1.5rem;
+}
+
+@media only screen and (max-width: 600px) {
+  .nav-link {
+    font-size: 1rem;
+  }
+  .nav {
+    display:flex;
+    justify-content:center;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  .nav {
+    display:flex;
+    justify-content:center;
+  }
+}
+
 .nav-link:hover {
     color: #fff;
     background-color: #000;
+    transform: translateY(7px);
+    transition-duration: 0.2s;
   }
 
 th {
