@@ -1,7 +1,15 @@
+* {
+  margin: 0px;
+}
+
+html{
+  height: 100%;
+}
+
 body {
+  height: 100%;
   background-color: #fff;
   color: #333;
-  margin: 33px;
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
   line-height: 18px;
@@ -95,3 +103,31 @@ label {
         padding: 7%;
     }
 }
+
+.admin {
+  display: flex;
+  justify-content:flex-end;
+}
+
+.page-wrap {
+  min-height: 100%;
+  /* equal to footer height */
+  margin: 2% 5% 0 5%;
+  margin-bottom: -142px;
+}
+
+.page-wrap:after {
+  content: "";
+  display: block;
+}
+
+/*Sticky Footer*/
+.site-footer, .page-wrap:after {
+  height: 142px;
+}
+
+.site-footer {
+  background-color: lightgray;
+  color: black;
+}
+/*end of Sticky Footer*/
