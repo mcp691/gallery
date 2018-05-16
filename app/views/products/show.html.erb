@@ -2,16 +2,16 @@
 <p id="notice"><%= notice %></p>
 <% provide(:title, @product.name) %>
 
-
+<%= link_to 'Back', products_path, style: "float:left;" %>
 <div class="paint" style="width: 30rem;">
-  <%= link_to 'Back', products_path %>
   <%= image_tag(@product.image_url, class: "img-fluid card-img-top") %>
   <div class="card-body col-md-6">
     <h1 class="card-title"><%= @product.name %></h1>
     <p><%= @product.description %></p>
     <h3 class="card-title"><%= number_to_currency(@product.price/100.to_f) %></h3>
-    <%= link_to 'Show', @product %>
+    <% if signed_in? && current_user.admin? %>
     <%= link_to 'Edit', edit_product_path(@product) %>
     <%= link_to 'Destroy', @product, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <% end %>
   </div>
 </div>
