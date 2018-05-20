@@ -3,6 +3,13 @@
 
 <h1>Artwork</h1>
 
+<div class="search-bar">
+  <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+  <%= form.text_field :q, id: 'q', value: params[:q], placeholder: "Search Paintings", class: "form-control mr-sm-2" %>
+  <%= form.submit 'Search', class: "btn btn-primary" %>
+  <% end %>
+</div>
+
 <div class="row prod-cards">
 <% @products.each do |product| %>
 <%= render product %>
