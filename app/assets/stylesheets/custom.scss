@@ -39,6 +39,8 @@ a {
   padding: 1% 1% 0 1%;
 }
 
+/* Navigation */
+
 .nav-link {
   font-size: 1.5rem;
 }
@@ -66,6 +68,8 @@ a {
     transform: translateY(7px);
     transition-duration: 0.2s;
   }
+
+/* End Navigation */
 
 th {
   padding-bottom: 5px;
@@ -140,11 +144,41 @@ label {
   margin: 2% 5% 0 5%;
 }
 
+/* Products */
+
+.prod-cards {
+  margin: 5% 2% 0 2%;
+}
+
+@media only screen and (max-width: 1200px) {
+  .prod-cards {
+    margin: auto;
+  }
+}
+
+.paint {
+  display:inline-table;
+  margin: 13% 0 7% 0;
+}
+
+.card-img-top {
+  box-shadow: 10px 10px 20px 0px;
+}
+
+.search-bar {
+  float: left;
+}
+
 @media only screen and (max-width: 800px) {
   .search-bar {
     width: 100%;
   }
 }
+
+/* End Products */
+
+
+/*Sticky Footer*/
 
 .page-wrap {
   min-height: 100%;
@@ -157,7 +191,6 @@ label {
   display: block;
 }
 
-/*Sticky Footer*/
 .site-footer, .page-wrap:after {
   height: 142px;
 }
@@ -166,4 +199,5 @@ label {
   background-color: lightgray;
   color: black;
 }
+
 /*end of Sticky Footer*/
