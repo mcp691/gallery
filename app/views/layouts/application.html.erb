@@ -10,26 +10,28 @@
 </head>
 
 <body>
-  <div class="jumbotron">
+  <header class="jumbotron">
     <span align="center">
       <h1>Kim Gagne</h1>
       <p class="lead">Artist &bull; Painter</p>
     </span>
-    <ul class="nav">
-      <li class="nav-item">
-        <%= link_to 'Home', static_pages_home_path, class: "nav-link active" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Products', products_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'About', static_pages_about_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Contact', static_pages_contact_path, class: "nav-link" %>
-      </li>
-    </ul>
-  </div>
+    <nav>
+      <ul class="nav">
+        <li class="nav-item">
+          <%= link_to 'Home', static_pages_home_path, class: "nav-link active" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Products', products_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'About', static_pages_about_path, class: "nav-link" %>
+        </li>
+        <li class="nav-item">
+          <%= link_to 'Contact', static_pages_contact_path, class: "nav-link" %>
+        </li>
+      </ul>
+    </nav>
+  </header>
 
   <div class="page-wrap">
     <div class="site-body">
