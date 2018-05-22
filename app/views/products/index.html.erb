@@ -1,14 +1,15 @@
 <p id="notice"><%= notice %></p>
 <% provide(:title, "Artwork") %>
 
-<div class="prod-cards">
-  <div class="search-bar">
-    <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
-    <%= form.text_field :q, id: 'q', value: params[:q], placeholder: "Search Paintings", class: "form-control mr-sm-2" %>
-    <br>
-    <%= form.submit 'Search', class: "btn btn-dark" %>
-    <% end %>
-  </div>
+<div class="search-bar">
+  <%= form_with(url: products_path, method: 'get', local: true) do |form| %>
+  <%= form.text_field :q, id: 'q', value: params[:q], placeholder: "Search Paintings", class: "form-control mr-sm-2" %>
+  <br>
+  <%= form.submit 'Search', class: "btn btn-dark" %>
+  <% end %>
+</div>
+
+<div class="prod-cards col-lg-9" align="center">
   <% @products.each do |product| %>
   <%= render product %>
   <% end %>
