@@ -28,46 +28,67 @@ pre {
 }
 
 a {
-  color: #000;
+  color: inherit;
 
   &:visited {
     color: #666;
   }
 }
 
-.jumbotron {
-  padding: 1% 1% 0 1%;
-}
-
 /* Navigation */
 
-.nav-link {
-  font-size: 1.5rem;
+.navbar {
+  background-color: lightgray;
 }
 
+#logo{
+  float: left;
+  margin-right: 20px;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  padding-top: 9px;
+  font-weight: bold;
+  color: inherit;
+}
+
+#logo:hover {
+  text-decoration: none;
+}
+
+.nav-item {
+  text-align: center;
+  font-size: 1.5rem;
+  padding: 0.5rem;
+}
+
+      /* Adjust for mobile devices */
 @media only screen and (max-width: 600px) {
   .nav-link {
     font-size: 1rem;
   }
-  .nav {
+  .navbar {
     display:flex;
-    justify-content:center;
+    justify-content: center;
   }
 }
 
 @media only screen and (max-width: 800px) {
   .nav {
-    display:flex;
-    justify-content:center;
+    margin: auto;
   }
 }
 
-.nav-link:hover {
+      /* Stop Adjust for mobile devices */
+
+.nav-item:hover,{
+  background-color: #000;
+  transition-duration: 0.5s;
+  color: #fff;
+  .nav-link {
     color: #fff;
-    background-color: #000;
-    transform: translateY(7px);
-    transition-duration: 0.2s;
+    transition-duration: 0.5s;
   }
+}
 
 /* End Navigation */
 
@@ -128,10 +149,10 @@ label {
 }
 
 @media only screen and (max-width: 800px) {
-    .form-frame {
-        margin: 10% 0% 5% 0%;
-        padding: 7%;
-    }
+  .form-frame {
+    margin: 10% 0% 5% 0%;
+    padding: 7%;
+  }
 }
 
 .admin {
@@ -141,13 +162,14 @@ label {
 }
 
 .site-body {
-  margin: 2% 5% 0 5%;
+  margin: 2% 1% 0 1%;
 }
 
 /* Products */
 
 .prod-cards {
-  margin: 5% 2% 0 2%;
+  margin: 1% 2% 0 2%;
+  display: inline-table;
 }
 
 @media only screen and (max-width: 1200px) {
@@ -166,12 +188,15 @@ label {
 }
 
 .search-bar {
+  padding: 2%;
   float: left;
+  background-color: lightgray;
 }
 
 @media only screen and (max-width: 800px) {
   .search-bar {
     width: 100%;
+    margin-bottom: 25%;
   }
 }
 
