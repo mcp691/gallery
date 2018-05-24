@@ -2,31 +2,11 @@
 <html>
 <head>
   <title><%= full_title(yield(:title)) %></title>
-  <%= csrf_meta_tags %>
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4" crossorigin="anonymous">
-  <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-  <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <%= render 'layouts/rails_default' %>
 </head>
 
 <body>
-  <nav class="navbar">
-    <div>
-    <h1><%= link_to 'Kim Gagne', static_pages_home_path, id: "logo" %></h1>
-    <p class="lead">Artist &bull; Painter</p>
-  </div>
-    <ul class="nav mr-auto">
-      <li class="nav-item">
-        <%= link_to 'Products', products_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'About', static_pages_about_path, class: "nav-link" %>
-      </li>
-      <li class="nav-item">
-        <%= link_to 'Contact', static_pages_contact_path, class: "nav-link" %>
-      </li>
-    </ul>
-  </nav>
+  <%= render 'layouts/navigation' %>
 
   <div class="page-wrap">
     <div class="site-body">
@@ -37,14 +17,5 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ" crossorigin="anonymous"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 </body>
-<footer class="site-footer">
-  &copy; 2018 Kim Gagne
-  <span class="admin">
-    <% if user_signed_in? %>
-    <%= link_to('Logout', destroy_user_session_path, method: :delete) %>
-    <% else %>
-    <%= link_to('Admin Log In', new_user_session_path) %>
-    <% end %>
-  </span>
-</footer>
+<%= render 'layouts/footer' %>
 </html>
