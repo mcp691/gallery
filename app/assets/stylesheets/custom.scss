@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald|Slabo+27px');
+
 * {
   margin: 0px;
 }
@@ -15,10 +17,15 @@ body {
   line-height: 18px;
 }
 
-p, ol, ul, td {
-  font-family: verdana, arial, helvetica, sans-serif;
-  font-size: 13px;
-  line-height: 18px;
+p {
+  font-family: 'Slabo 27px', serif;
+  font-size: 20px;
+  line-height: 30px;
+  word-spacing: 1px;
+}
+
+h1 {
+  font-family: 'Oswald', sans-serif;
 }
 
 pre {
@@ -56,6 +63,7 @@ a {
 }
 
 .nav-item {
+  font-family: 'Oswald', sans-serif;
   text-align: center;
   font-size: 1.5rem;
   padding: 0.5rem;
