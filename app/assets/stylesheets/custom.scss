@@ -179,9 +179,13 @@ label {
   margin-bottom: 5%;
 }
 
-.prod-cards {
-  margin: 1% 2% 0 2%;
+.prod-screen {
+  margin: 7% 2% 0 2%;
   padding: 0px;
+}
+
+.prod-cards {
+  margin: 1%;
   display: inline-table;
 }
 
@@ -201,16 +205,13 @@ label {
 }
 
 .search-bar {
-  padding: 2%;
   float: left;
   background-color: lightgray;
-  margin-bottom: 10%;
 }
 
 @media only screen and (max-width: 800px) {
   .search-bar {
     width: 100%;
-    margin-bottom: 25%;
   }
 }
 
