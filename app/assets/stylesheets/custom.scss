@@ -40,6 +40,9 @@ a {
   &:visited {
     color: #666;
   }
+  &:hover {
+    text-decoration: none;
+  }
 }
 
 /* Navigation */
@@ -217,6 +220,15 @@ label {
 
 /* End Products */
 
+/* Blog */
+
+.blog-body {
+  margin: 3% 0 2% 0;
+}
+
+.blog-page {
+  margin: 10% 0 10% 0;
+}
 
 /*Sticky Footer*/
 
