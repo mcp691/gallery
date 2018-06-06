@@ -1,9 +1,10 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
   <% @entries.each do |entry| %>
-  <h1>
+  <h1 class="blog-title">
     <%= link_to entry.title, entry %>
   </h1>
+  <em><small>Posted: <%= entry.created_at.strftime("%m-%d-%Y") %>, <%= "#{time_ago_in_words(entry.created_at)} ago" %></small></em>
   <p class="blog-body">
     <%= link_to entry.content, entry %>
   </p>

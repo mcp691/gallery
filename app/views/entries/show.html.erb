@@ -5,6 +5,7 @@
     <h1>
       <%= @entry.title %>
     </h1>
+    <em><small>Posted: <%= @entry.created_at.strftime("%m-%d-%Y") %>, <%= "#{time_ago_in_words(@entry.created_at)} ago" %></small></em>
 
     <p class="blog-body">
       <%= @entry.content %>
