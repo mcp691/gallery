@@ -1,4 +1,8 @@
 <div class="container">
+  <% if signed_in? && current_user.admin? %>
+  <%= link_to 'New Entry', new_entry_path, class: "btn btn-primary" %>
+  <% end %>
+
   <p id="notice"><%= notice %></p>
   <% @entries.each do |entry| %>
   <h1 class="blog-title">
@@ -10,16 +14,11 @@
   </p>
   <br>
   <% if signed_in? && current_user.admin? %>
-  <%= link_to 'Show', entry %>
-  <%= link_to 'Edit', edit_entry_path(entry) %>
-  <%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' } %>
+  <%= link_to 'Show', entry, class: "btn btn-dark" %>
+  <%= link_to 'Edit', edit_entry_path(entry), class: "btn btn-dark" %>
+  <%= link_to 'Destroy', entry, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
   <% end %>
   <hr>
   <% end %>
 </div>
-
 <br>
-
-<% if signed_in? && current_user.admin? %>
-<%= link_to 'New Entry', new_entry_path %>
-<% end %>

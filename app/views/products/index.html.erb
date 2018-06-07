@@ -1,4 +1,7 @@
 <p id="notice"><%= notice %></p>
+<% if signed_in? && current_user.admin? %>
+<%= link_to 'New Product', new_product_path, class: "btn btn-primary", style: "color:white; margin: 2%;" %>
+<% end %>
 <% provide(:title, "Artwork") %>
 
 <div class="prod-screen" align="center">
@@ -7,6 +10,3 @@
   <% end %>
 </div>
 <br>
-<% if signed_in? && current_user.admin? %>
-<%= link_to 'New Product', new_product_path, class: "btn btn-dark", style: "color:white; margin: 2%;" %>
-<% end %>

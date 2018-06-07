@@ -1,5 +1,6 @@
 <div class="container">
   <p id="notice"><%= notice %></p>
+  <%= link_to 'Back', entries_path, class: "btn btn-dark", style: "color:white;" %>
   <div class="blog-page">
 
     <h1>
@@ -11,8 +12,8 @@
       <%= @entry.content %>
     </p>
     <% if signed_in? && current_user.admin? %>
-    <%= link_to 'Edit', edit_entry_path(@entry), class: "btn btn-dark", style: "color:white;" %> |
+    <%= link_to 'Edit', edit_entry_path(@entry), class: "btn btn-dark" %>
+    <%= link_to 'Destroy', @entry, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-danger" %>
     <% end %>
-    <%= link_to 'Back', entries_path, class: "btn btn-dark", style: "color:white;" %>
   </div>
 </div>

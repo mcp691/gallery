@@ -36,11 +36,8 @@ pre {
 
 a {
   color: inherit;
-
-  &:visited {
-    color: #666;
-  }
   &:hover {
+    color: #666;
     text-decoration: none;
   }
 }
@@ -194,7 +191,7 @@ label {
 
 @media only screen and (max-width: 1200px) {
   .prod-cards {
-    margin: auto;
+    margin: 5% 2% 0 2%;
   }
 }
 
