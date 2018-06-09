@@ -1,8 +1,19 @@
 <div class="container">
-<h1>Lorem ipsum dolor sit amet.</h1>
+<p>
+  Most Recent Post
+</p>
+<% @entries.each_with_index do |entry| %>
+<h1 class="blog-title">
+  <%= link_to entry.title, entry %>
+</h1>
+<em><small>Posted: <%= entry.created_at.strftime("%m-%d-%Y") %>, <%= "#{time_ago_in_words(entry.created_at)} ago" %></small></em>
+<p class="blog-body">
+  <%= link_to entry.content, entry %>
+</p>
+<% end %>
 
-<p>Consectetur adipiscing elit. Donec tortor dolor, pellentesque id volutpat sed, accumsan et turpis. Ut interdum fringilla risus, quis feugiat mauris aliquet sit amet. Nullam in vulputate ipsum. Proin nunc enim, interdum nec rutrum quis, sollicitudin ac magna. Duis viverra placerat quam, quis aliquet quam porta quis. Nulla tincidunt lectus quam, iaculis euismod sapien molestie id. Duis elit nisl, dignissim eleifend tellus id, tincidunt posuere leo. Aenean id dui justo. Curabitur rhoncus, est id finibus mollis, sapien nisi cursus quam, eu commodo metus sem vitae enim. Nulla nulla erat, blandit vel est et, ullamcorper volutpat nunc. Fusce vel velit vitae elit vehicula tincidunt.</p>
 <hr>
+
 <span align="center">
   <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
     <ol class="carousel-indicators">

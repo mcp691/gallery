@@ -1,6 +1,7 @@
 class StaticPagesController < ApplicationController
   def home
-    @products = Product.limit(5)
+    @products = Product.order("created_at DESC").limit(5)
+    @entries = Entry.order("created_at DESC").limit(1)
   end
 
   def thank_you
