@@ -1,4 +1,5 @@
 <div class="container">
+  <% provide(:title, "Blog") %>
   <% if signed_in? && current_user.admin? %>
   <%= link_to 'New Entry', new_entry_path, class: "btn btn-primary" %>
   <% end %>
