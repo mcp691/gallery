@@ -3,14 +3,12 @@ Rails.application.routes.draw do
   devise_for :users, path: '', path_names: { sign_in: 'login', sign_out: 'logout' }
   resources :users
   resources :products
-  
-  get 'static_pages/home'
 
-  get 'static_pages/about'
+  get '/about', to: 'static_pages#about'
 
-  get 'static_pages/contact'
+  get '/contact', to: 'static_pages#contact'
 
-  post 'static_pages/thank_you'
+  post '/thank_you', to: 'static_pages#thank_you'
 
   root 'static_pages#home'
 

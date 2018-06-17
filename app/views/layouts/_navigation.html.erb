@@ -1,6 +1,6 @@
 <nav class="navbar">
   <div>
-    <h1><%= link_to 'Kim Gagne', static_pages_home_path, id: "logo" %></h1>
+    <h1><%= link_to 'Kim Gagne', root_path, id: "logo" %></h1>
     <p class="lead">Artist &bull; Painter</p>
   </div>
   <ul class="nav mr-auto">
@@ -11,10 +11,10 @@
       <%= link_to 'Blog', entries_path, class: "nav-link" %>
     </li>
     <li class="nav-item">
-      <%= link_to 'About', static_pages_about_path, class: "nav-link" %>
+      <%= link_to 'About', about_path, class: "nav-link" %>
     </li>
     <li class="nav-item">
-      <%= link_to 'Contact', static_pages_contact_path, class: "nav-link" %>
+      <%= link_to 'Contact', contact_path, class: "nav-link" %>
     </li>
   </ul>
   <div class="search-bar">
